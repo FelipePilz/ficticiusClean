@@ -1,7 +1,6 @@
 package br.com.ficticiusClean.model;
 
-import java.math.BigDecimal;
-import java.util.GregorianCalendar;
+import java.time.Year;
 import javax.persistence.*;
 import lombok.Data;
 
@@ -23,11 +22,11 @@ public class Vehicle
 	private String model;
 
 	@Column(nullable = false)
-	private GregorianCalendar manufacturingDate;
+	private Year manufacturingDate;
 
 	@Column(nullable = false)
-	private BigDecimal averageConsumptionInCity;
+	private Integer averageConsumptionInCity;
 
 	@Column(nullable = false)
-	private BigDecimal averageConsumptionInHighways;
+	private Integer averageConsumptionInHighways;
 }
