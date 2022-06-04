@@ -1,4 +1,4 @@
-package br.com.ficticiusClean;
+package br.com.ficticiusclean;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

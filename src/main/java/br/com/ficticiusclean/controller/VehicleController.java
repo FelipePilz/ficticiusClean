@@ -1,7 +1,7 @@
-package br.com.ficticiusClean.controller;
+package br.com.ficticiusclean.controller;
 
-import br.com.ficticiusClean.model.Vehicle;
-import br.com.ficticiusClean.repository.VehicleRepository;
+import br.com.ficticiusclean.model.Vehicle;
+import br.com.ficticiusclean.repository.VehicleRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

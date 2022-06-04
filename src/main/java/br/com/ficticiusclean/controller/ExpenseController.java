@@ -1,8 +1,8 @@
-package br.com.ficticiusClean.controller;
+package br.com.ficticiusclean.controller;
 
-import br.com.ficticiusClean.model.Expense;
-import br.com.ficticiusClean.model.Ranking;
-import br.com.ficticiusClean.service.ExpenseService;
+import br.com.ficticiusclean.model.Expense;
+import br.com.ficticiusclean.model.Ranking;
+import br.com.ficticiusclean.service.ExpenseService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

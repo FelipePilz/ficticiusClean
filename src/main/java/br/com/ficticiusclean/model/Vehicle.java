@@ -1,4 +1,4 @@
-package br.com.ficticiusClean.model;
+package br.com.ficticiusclean.model;
 
 import java.time.Year;
 import javax.persistence.*;
