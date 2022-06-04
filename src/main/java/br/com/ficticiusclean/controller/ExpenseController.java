@@ -1,6 +1,6 @@
 package br.com.ficticiusclean.controller;
 
-import br.com.ficticiusclean.model.Expense;
+import br.com.ficticiusclean.model.ExpenseData;
 import br.com.ficticiusclean.model.Ranking;
 import br.com.ficticiusclean.service.ExpenseService;
 import java.util.List;
@@ -15,8 +15,8 @@ public class ExpenseController
 	private ExpenseService expenseService;
 
 	@PostMapping
-	public List<Ranking> calculateExpense(@RequestBody Expense expense)
+	public List<Ranking> calculateExpense(@RequestBody ExpenseData expenseData)
 	{
-		return expenseService.calculateExpense(expense);
+		return expenseService.calculateExpense(expenseData);
 	}
 }

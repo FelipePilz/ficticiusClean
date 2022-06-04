@@ -1,6 +1,6 @@
 package br.com.ficticiusclean.service.impl;
 
-import br.com.ficticiusclean.model.Expense;
+import br.com.ficticiusclean.model.ExpenseData;
 import br.com.ficticiusclean.model.Ranking;
 import br.com.ficticiusclean.model.Vehicle;
 import br.com.ficticiusclean.repository.VehicleRepository;
@@ -19,7 +19,7 @@ public class ExpenseServiceImpl implements ExpenseService
 	private VehicleRepository vehicleRepository;
 
 	@Override
-	public List<Ranking> calculateExpense(Expense expense)
+	public List<Ranking> calculateExpense(ExpenseData expenseData)
 	{
 		List<Vehicle> vehicleList = vehicleRepository.findAll();
 
@@ -30,9 +30,9 @@ public class ExpenseServiceImpl implements ExpenseService
 			{
 				Ranking ranking = new Ranking();
 
-				Integer totalFuel = expense.getKmInCity() / vehicle.getAverageConsumptionInCity()
-					+ expense.getKmInHighway() / vehicle.getAverageConsumptionInHighways();
-				Integer totalValue = totalFuel * expense.getGasPrice();
+				Integer totalFuel = expenseData.getKmInCity() / vehicle.getAverageConsumptionInCity()
+					+ expenseData.getKmInHighway() / vehicle.getAverageConsumptionInHighways();
+				Integer totalValue = totalFuel * expenseData.getGasPrice();
 
 				ranking.setName(vehicle.getName());
 				ranking.setBrand(vehicle.getBrand());

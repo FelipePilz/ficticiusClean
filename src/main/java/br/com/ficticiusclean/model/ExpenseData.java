@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Expense
+public class ExpenseData
 {
 	@Column(nullable = false, length = 10)
 	private Integer gasPrice;
