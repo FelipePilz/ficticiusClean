@@ -37,7 +37,7 @@ public class ExpenseServiceImpl implements ExpenseService
 				ranking.setName(vehicle.getName());
 				ranking.setBrand(vehicle.getBrand());
 				ranking.setModel(vehicle.getModel());
-				ranking.setManufacturingDate(vehicle.getManufacturingDate());
+				ranking.setManufacturingYear(vehicle.getManufacturingYear());
 				ranking.setTotalFuel(totalFuel);
 				ranking.setTotalValue(totalValue);
 				rankingList.add(ranking);
