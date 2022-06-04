@@ -1,10 +1,13 @@
 package br.com.ficticiusclean.controller;
 
+import br.com.ficticiusclean.exception.VehicleNotFoundException;
 import br.com.ficticiusclean.model.Vehicle;
 import br.com.ficticiusclean.repository.VehicleRepository;
 import java.util.List;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -24,7 +27,12 @@ public class VehicleController
 	@GetMapping("/{id}")
 	public Vehicle getVehicleById(@PathVariable Long id)
 	{
-		return vehicleRepository.findById(id).get();
+		Optional<Vehicle> vehicleFound = vehicleRepository.findById(id);
+		if (!vehicleFound.isEmpty())
+		{
+			return vehicleFound.get();
+		}
+		throw new VehicleNotFoundException("Vehicle not found!");
 	}
 
 	@PostMapping
