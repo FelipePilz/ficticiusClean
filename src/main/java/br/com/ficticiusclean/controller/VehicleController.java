@@ -16,14 +16,27 @@ public class VehicleController
 	private VehicleRepository vehicleRepository;
 
 	@GetMapping
-	public List<Vehicle> vehicleList()
+	public List<Vehicle> getVehicleList()
 	{
 		return vehicleRepository.findAll();
 	}
 
+	@GetMapping("/{id}")
+	public Vehicle getVehicleById(@PathVariable Long id)
+	{
+		return vehicleRepository.findById(id).get();
+	}
+
 	@PostMapping
 	@ResponseStatus(HttpStatus.CREATED)
-	public Vehicle addVehicle(@RequestBody Vehicle vehicle) {
+	public Vehicle addVehicle(@RequestBody Vehicle vehicle)
+	{
 		return vehicleRepository.save(vehicle);
+	}
+
+	@DeleteMapping("/{id}")
+	public void deleteVehicleById(@PathVariable Long id)
+	{
+		vehicleRepository.deleteById(id);
 	}
 }
