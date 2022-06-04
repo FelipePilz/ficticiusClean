@@ -1,7 +1,7 @@
 package br.com.ficticiusclean.controllers;
 
-import br.com.ficticiusclean.models.ExpenseData;
-import br.com.ficticiusclean.models.VehiclePerfomance;
+import br.com.ficticiusclean.models.dtos.ExpenseDataDto;
+import br.com.ficticiusclean.models.dtos.VehiclePerformanceDto;
 import br.com.ficticiusclean.services.ExpenseService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,8 +15,8 @@ public class ExpenseController
 	private ExpenseService expenseService;
 
 	@PostMapping
-	public List<VehiclePerfomance> calculateExpense(@RequestBody ExpenseData expenseData)
+	public List<VehiclePerformanceDto> calculateExpense(@RequestBody ExpenseDataDto expenseDataDto)
 	{
-		return expenseService.calculateExpense(expenseData);
+		return expenseService.calculateExpense(expenseDataDto);
 	}
 }

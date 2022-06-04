@@ -1,22 +1,17 @@
-package br.com.ficticiusclean.models;
+package br.com.ficticiusclean.models.dtos;
 
 import java.math.BigDecimal;
 import java.time.Year;
-import javax.persistence.*;
+import javax.persistence.Column;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@Entity
 @AllArgsConstructor
 @NoArgsConstructor
-public class Vehicle
+public class VehiclePerformanceDto
 {
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id;
-
 	@Column(nullable = false)
 	private String name;
 
@@ -30,8 +25,8 @@ public class Vehicle
 	private Year manufacturingYear;
 
 	@Column(nullable = false)
-	private BigDecimal averageCityConsumption;
+	private BigDecimal totalFuelUsed;
 
 	@Column(nullable = false)
-	private BigDecimal averageHighwayConsumption;
+	private BigDecimal totalFuelValue;
 }
