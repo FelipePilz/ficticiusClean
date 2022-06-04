@@ -1,7 +1,7 @@
 package br.com.ficticiusclean.controller;
 
 import br.com.ficticiusclean.model.ExpenseData;
-import br.com.ficticiusclean.model.Ranking;
+import br.com.ficticiusclean.model.VehiclePerfomance;
 import br.com.ficticiusclean.service.ExpenseService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +15,7 @@ public class ExpenseController
 	private ExpenseService expenseService;
 
 	@PostMapping
-	public List<Ranking> calculateExpense(@RequestBody ExpenseData expenseData)
+	public List<VehiclePerfomance> calculateExpense(@RequestBody ExpenseData expenseData)
 	{
 		return expenseService.calculateExpense(expenseData);
 	}

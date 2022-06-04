@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Ranking
+public class VehiclePerfomance
 {
 	@Column(nullable = false, length = 255)
 	private String name;
