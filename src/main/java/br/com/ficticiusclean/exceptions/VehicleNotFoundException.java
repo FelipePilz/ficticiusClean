@@ -1,4 +1,4 @@
-package br.com.ficticiusclean.exception;
+package br.com.ficticiusclean.exceptions;
 
 public class VehicleNotFoundException extends RuntimeException
 {

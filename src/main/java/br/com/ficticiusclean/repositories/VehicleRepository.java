@@ -1,6 +1,6 @@
-package br.com.ficticiusclean.repository;
+package br.com.ficticiusclean.repositories;
 
-import br.com.ficticiusclean.model.Vehicle;
+import br.com.ficticiusclean.models.Vehicle;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

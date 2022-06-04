@@ -1,10 +1,10 @@
-package br.com.ficticiusclean.service.impl;
+package br.com.ficticiusclean.services.impl;
 
-import br.com.ficticiusclean.model.ExpenseData;
-import br.com.ficticiusclean.model.VehiclePerfomance;
-import br.com.ficticiusclean.model.Vehicle;
-import br.com.ficticiusclean.repository.VehicleRepository;
-import br.com.ficticiusclean.service.ExpenseService;
+import br.com.ficticiusclean.models.ExpenseData;
+import br.com.ficticiusclean.models.VehiclePerfomance;
+import br.com.ficticiusclean.models.Vehicle;
+import br.com.ficticiusclean.repositories.VehicleRepository;
+import br.com.ficticiusclean.services.ExpenseService;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

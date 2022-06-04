@@ -1,13 +1,12 @@
-package br.com.ficticiusclean.controller;
+package br.com.ficticiusclean.controllers;
 
-import br.com.ficticiusclean.exception.VehicleNotFoundException;
-import br.com.ficticiusclean.model.Vehicle;
-import br.com.ficticiusclean.repository.VehicleRepository;
+import br.com.ficticiusclean.exceptions.VehicleNotFoundException;
+import br.com.ficticiusclean.models.Vehicle;
+import br.com.ficticiusclean.repositories.VehicleRepository;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

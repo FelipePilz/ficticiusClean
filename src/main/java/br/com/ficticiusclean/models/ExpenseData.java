@@ -1,4 +1,4 @@
-package br.com.ficticiusclean.model;
+package br.com.ficticiusclean.models;
 
 import javax.persistence.Column;
 import lombok.AllArgsConstructor;
