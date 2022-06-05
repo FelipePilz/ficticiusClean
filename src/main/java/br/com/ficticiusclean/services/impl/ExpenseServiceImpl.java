@@ -10,6 +10,7 @@ import java.math.MathContext;
 import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -59,6 +60,9 @@ public class ExpenseServiceImpl implements ExpenseService
 				vehiclePerformanceDto.setTotalFuelValue(totalValue);
 				vehiclePerformanceDtoList.add(vehiclePerformanceDto);
 			}
+
+			Collections.sort(vehiclePerformanceDtoList,
+				Comparator.comparing(VehiclePerformanceDto::getTotalFuelValue));
 			return vehiclePerformanceDtoList;
 		}
 		return Collections.emptyList();
