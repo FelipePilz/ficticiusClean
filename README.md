@@ -15,7 +15,7 @@ Para fazer esse desafio foram utilizados:
 Para execução, pelo menos com o **IntelliJ** é simples:
 1. Clonar o projeto;
 2. Ter o Java 11 e Maven instalado.
-3. Dar um mvn clean install no terminal
+3. Dar um `mvn clean install` no terminal
 4. Dar 'run' na aplicação
 
 ## Requisições principais (Todas feitas a partir do localhost:8080)
